@@ -16,13 +16,16 @@ import java.util.Scanner;
  */
 public class ConsoleUserInteractor extends AbstractUserInteractor  implements UserInteractor {
 
-    public ConsoleUserInteractor() throws UserInteractorException  { }
+    private Scanner scan;
+
+    public ConsoleUserInteractor() throws UserInteractorException  {
+        scan = new Scanner(System.in);
+    }
 
     @Override
     public String readCommand() throws UserInteractorReadException {
         String command = null;
         try {
-            Scanner scan = new Scanner(System.in);
             command = scan.nextLine();
         }
         catch (Exception ex) {

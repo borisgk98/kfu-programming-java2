@@ -16,7 +16,7 @@ import java.util.List;
  * University, ITIS. http://study.istamendil.info/
  */
 public class RAMDb extends AbstractDb implements Db {
-        List data;
+        protected List data;
 
         public RAMDb() {
             this.data = new ArrayList();
